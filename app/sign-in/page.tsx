@@ -18,6 +18,7 @@ export default function SignIn() {
           <div className="card-body p-4">
             {step === "email" ? (
               <form
+                key="email"
                 onSubmit={(e) => {
                   e.preventDefault();
                   setStep("code");
@@ -44,7 +45,7 @@ export default function SignIn() {
                 </button>
               </form>
             ) : (
-              <form onSubmit={(e) => e.preventDefault()}>
+              <form key="code" onSubmit={(e) => e.preventDefault()}>
                 <h1 className="h4 mb-1">Check your inbox</h1>
                 <p className="text-body-secondary small mb-4">
                   Click the link we sent to <span className="fw-medium text-body">{email}</span>, or enter the code

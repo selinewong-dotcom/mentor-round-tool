@@ -72,6 +72,29 @@ h1, h2, h3, .h1, .h2, .h3 {
 
 .form-range::-webkit-slider-thumb { background: var(--teal); }
 .form-range::-moz-range-thumb { background: var(--teal); }
+.form-range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem var(--bs-focus-ring-color);
+}
+.form-range:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem var(--bs-focus-ring-color);
+}
+
+.btn {
+  --bs-btn-focus-shadow-rgb: 15, 118, 110;
+}
+
+.btn-link {
+  --bs-btn-color: var(--teal);
+  --bs-btn-hover-color: var(--charcoal);
+  --bs-btn-active-color: var(--charcoal);
+}
+
+.nav-link:focus-visible,
+.navbar-toggler:focus,
+.list-group-item-action:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--bs-focus-ring-color);
+}
 
 .card {
   --bs-card-bg: #fff;

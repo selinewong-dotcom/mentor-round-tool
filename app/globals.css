@@ -6,6 +6,8 @@
 
   --bs-body-bg: var(--sand);
   --bs-body-color: var(--charcoal);
+  --bs-body-color-rgb: 31, 41, 55;
+  --bs-emphasis-color-rgb: 31, 41, 55;
   --bs-body-font-family: var(--font-geist-sans), system-ui, sans-serif;
   --bs-font-monospace: var(--font-geist-mono), monospace;
   --bs-emphasis-color: var(--charcoal);
@@ -72,6 +74,8 @@ h1, h2, h3, .h1, .h2, .h3 {
 
 .form-range::-webkit-slider-thumb { background: var(--teal); }
 .form-range::-moz-range-thumb { background: var(--teal); }
+.form-range::-webkit-slider-runnable-track { background: rgba(31, 41, 55, 0.1); }
+.form-range::-moz-range-track { background: rgba(31, 41, 55, 0.1); }
 .form-range:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem var(--bs-focus-ring-color);
 }
@@ -141,6 +145,11 @@ h1, h2, h3, .h1, .h2, .h3 {
   background: rgba(244, 241, 234, 0.9);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--bs-border-color);
+}
+
+.topnav {
+  --bs-navbar-color: rgba(31, 41, 55, 0.7);
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231F2937' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .topnav .nav-link {
@@ -253,7 +262,9 @@ h1, h2, h3, .h1, .h2, .h3 {
 }
 
 .otp-input {
-  width: 3rem;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 3rem;
   height: 3.25rem;
   text-align: center;
   font-size: 1.25rem;
